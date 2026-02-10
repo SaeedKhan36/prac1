@@ -90,3 +90,13 @@ class triangle extends shape {
         return `The color of the triangle is ${this.color}`
     }
 }   
+
+const fs = require('fs');
+
+fs.readFile("a.txt", "utf-8", (err, data) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    console.log(data);
+});
