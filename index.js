@@ -1,8 +1,9 @@
 class Rectangle extends shape {
     constructor (height,length,color){
-        super(color);
+        super(color, depth);
         this.height= height;
         this.length= length;
+        
    
 
     }
@@ -26,8 +27,8 @@ class Rectangle extends shape {
 
 
 class circle extends shape {
-    constructor (radius,color){
-        super(color);   
+    constructor (radius,color,depth){
+        super(color,depth);   
         this.radius= radius;
        
 
@@ -47,8 +48,8 @@ class circle extends shape {
 } 
 
 class square extends shape {
-    constructor (side,color){
-        super(color);
+    constructor (side,color,depth){
+        super(color,depth);
         this.side= side;
     }
 
@@ -65,18 +66,19 @@ class square extends shape {
 }
 
 class shape {
-    constructor (color){
+    constructor (color, depth){
         this.color= color;
+        this.depth= depth;
 
     }
     paint(){
-        return `The color of the shape is ${this.color}`
+        return `The color of the shape is ${this.color} and depth is ${this.depth}`
     }
 }
 
 class triangle extends shape {
-    constructor (base,height,color){
-        super(color);
+    constructor (base,height,color,depth){
+        super(color,depth);
         this.base= base;
         this.height= height;
     }
