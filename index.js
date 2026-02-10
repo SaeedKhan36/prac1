@@ -73,3 +73,18 @@ class shape {
         return `The color of the shape is ${this.color}`
     }
 }
+
+class triangle extends shape {
+    constructor (base,height,color){
+        super(color);
+        this.base= base;
+        this.height= height;
+    }
+
+    area(){
+        return 0.5 * this.base * this.height
+    }
+    paint(){
+        return `The color of the triangle is ${this.color}`
+    }
+}   
