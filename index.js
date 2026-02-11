@@ -1,102 +1,138 @@
-class Rectangle extends shape {
-    constructor (height,length,color){
-        super(color, depth);
-        this.height= height;
-        this.length= length;
+// class Rectangle extends shape {
+//     constructor (height,length,color){
+//         super(color, depth);
+//         this.height= height;
+//         this.length= length;
         
    
 
-    }
+//     }
 
-    area(){
-        return this.length * this.height
-    }
+//     area(){
+//         return this.length * this.height
+//     }
 
-    perimeter(){
-        return 2 * (this.length + this.height)
-    }
+//     perimeter(){
+//         return 2 * (this.length + this.height)
+//     }
   
     
-}
-  const  r1 = new Rectangle (2,3,"red")
-  console.log(r1)
-  const r2 = new Rectangle (2,4,"black");
-  console.log(r2.area())
-  console.log(r2.perimeter())
+// }
+//   const  r1 = new Rectangle (2,3,"red")
+//   console.log(r1)
+//   const r2 = new Rectangle (2,4,"black");
+//   console.log(r2.area())
+//   console.log(r2.perimeter())
 
 
 
-class circle extends shape {
-    constructor (radius,color,depth){
-        super(color,depth);   
-        this.radius= radius;
+// class circle extends shape {
+//     constructor (radius,color,depth){
+//         super(color,depth);   
+//         this.radius= radius;
        
 
-    }
+//     }
 
-    area(){
-        return Math.PI * this.radius * this.radius
-    }
+//     area(){
+//         return Math.PI * this.radius * this.radius
+//     }
 
-    circumference(){
-        return 2 * Math.PI * this.radius
-    }
+//     circumference(){
+//         return 2 * Math.PI * this.radius
+//     }
 
-    paint(){
-        return `The color of the circle is ${this.color}`
-    }
-} 
+//     paint(){
+//         return `The color of the circle is ${this.color}`
+//     }
+// } 
 
-class square extends shape {
-    constructor (side,color,depth){
-        super(color,depth);
-        this.side= side;
-    }
+// class square extends shape {
+//     constructor (side,color,depth){
+//         super(color,depth);
+//         this.side= side;
+//     }
 
-    area(){
-        return this.side * this.side
-    }
+//     area(){
+//         return this.side * this.side
+//     }
 
-    perimeter(){
-        return 4 * this.side
-    }
-    paint(){
-        return `The color of the square is ${this.color}`
-    }
+//     perimeter(){
+//         return 4 * this.side
+//     }
+//     paint(){
+//         return `The color of the square is ${this.color}`
+//     }
+// }
+
+// class shape {
+//     constructor (color, depth){
+//         this.color= color;
+//         this.depth= depth;
+
+//     }
+//     paint(){
+//         return `The color of the shape is ${this.color} and depth is ${this.depth}`
+//     }
+// }
+
+// class triangle extends shape {
+//     constructor (base,height,color,depth){
+//         super(color,depth);
+//         this.base= base;
+//         this.height= height;
+//     }
+
+//     area(){
+//         return 0.5 * this.base * this.height
+//     }
+//     paint(){
+//         return `The color of the triangle is ${this.color}`
+//     }
+// }   
+
+// const fs = require('fs');
+
+// // fs.readFile("a.txt", "utf-8", (err, data) => {
+// //     if (err) {
+// //         console.error(err);
+// //         return;
+// //     }
+// //     console.log(data);
+// // });
+
+// const express = require ("express")
+// function calculateSum (n){
+//     let ans = 0 ;
+//     for (let i =0 ; i <=n ; i++){
+//         ans = ans+ i
+//     }
+//     return ans;
+// }
+
+// const app = express()
+
+// app.get("/",function(req,res){
+//     const n = req.query.n;
+//     const ans = calculateSum(n)
+//     res.send(ans);
+// })
+// app.listen(3000
+// )
+
+
+const express = require("express")
+function calculateSum(n){
+    return a+b ;
 }
 
-class shape {
-    constructor (color, depth){
-        this.color= color;
-        this.depth= depth;
 
-    }
-    paint(){
-        return `The color of the shape is ${this.color} and depth is ${this.depth}`
-    }
-}
+const app =express()
+app.get("/",function(req,res){
+    const a =req.query.a
+    const b =req.query.b
+    const ans = calculateSum(a,b)
+    res.send(ans)
+})
 
-class triangle extends shape {
-    constructor (base,height,color,depth){
-        super(color,depth);
-        this.base= base;
-        this.height= height;
-    }
-
-    area(){
-        return 0.5 * this.base * this.height
-    }
-    paint(){
-        return `The color of the triangle is ${this.color}`
-    }
-}   
-
-const fs = require('fs');
-
-fs.readFile("a.txt", "utf-8", (err, data) => {
-    if (err) {
-        console.error(err);
-        return;
-    }
-    console.log(data);
-});
+app.listen(3000)
